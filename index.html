@@ -7,15 +7,16 @@
       google.charts.load("current", {packages:["calendar"]});
       google.charts.setOnLoadCallback(drawChart);
 
+
    function drawChart() {
        var dataTable = new google.visualization.DataTable();
        dataTable.addColumn({ type: 'date', id: 'Date' });
        dataTable.addColumn({ type: 'number', id: 'Won/Loss' });
        dataTable.addColumn({type:'string', role: 'tooltip'});
        dataTable.addRows([
-          [ new Date(2019, 0, 17), 5, 'joined class and started medium blog' ], //joined class, started medium blog with "data-focused" post
-          [ new Date(2019, 0, 23), 2, 'created Reddit account' ], //created reddit account
-          [ new Date(2019, 0, 29), 2, 'first reddit post on link between freedom, life expectancy and wealth' ],
+          [ new Date(2019, 0, 17), 10, 'joined class and started medium blog' ], //joined class, started medium blog with "data-focused" post
+          [ new Date(2019, 0, 23), 5, 'created Reddit account' ], //created reddit account
+          [ new Date(2019, 0, 29), 10, 'first reddit post on link between freedom, life expectancy and wealth' ],
           [ new Date(2019, 2, 24), 15, 'reddit post on vegetarianism and meat consumption' ],
           [ new Date(2019, 1, 26), 60, 'got accepted into TowardsDataScience and published a medium post on adding value to Data Science'], // em
           [ new Date(2019, 1, 27), 45, 'DataSeries - invited to join and write for DataSeries - a network of elite data scientists established by a UK based VC firm' ], //.
@@ -29,7 +30,27 @@
           [ new Date(2019, 3, 2), 75, 'Medium article for TDS: Understanding Python Virtual Environments. Participated in a in-class hackaton with Rongyi and Yan Ting' ],
           [ new Date(2019, 3, 16), 65, 'Co-conducted tutorial with MK on meaningful data and p-values' ],
           [ new Date(2019, 1, 1), 40, 'Conducted Tutorial on Git and GitHub. Attended by DMI team and USP admin team' ],
-          [ new Date(2019, 3, 25), 70, 'Created this viz for meaningful outlook & reflection' ]
+          [ new Date(2019, 3, 25), 80, 'Started creating this viz for meaningful outlook & reflection' ],
+          [ new Date(2019, 2, 9), 30, 'Reddit Data Viz Post on Google Search Popularity of Fortnite and PUBG. New Tool used: Excel Geo Maps' ],
+          [ new Date(2019, 2, 10), 20, 'Reddit Data Viz Post on popularity of Indian political leaders. New Tool used: Tableau' ],
+          [ new Date(2019, 2, 11), 40, 'Reddit Data Viz Post on history of PUBG and Fortnite searches. Based on Feedback from Reddit' ],
+          [ new Date(2019, 2, 13), 1, 'Reddit Data Viz Post on Dominos vs Pizza hut by US State' ],
+          [ new Date(2019, 2, 14), 10, 'Reddit Data Viz Post on Cats vs Dog video popularity on Youtube' ],
+          [ new Date(2019, 2, 24), 10, 'Reddit Data Viz Post on Vegetarianism across countries' ],
+          [ new Date(2019, 3, 1), 50, 'Reddit Data Meme on excitement levels on r/dataisbeautiful for April Fools. Generate 1.1k upvotes' ],
+          [ new Date(2019, 3, 2), 10, 'Reddit Data Viz Post on How many times Google has been Googled.' ],
+          [ new Date(2019, 2, 24), 10, 'Reddit Data Viz Post on Vegetarianism across countries' ],
+          [ new Date(2019, 3, 22), 15, 'Reddit Data Cross Post on Immigrants in the US' ],
+          [ new Date(2019, 2, 24), 10, 'Reddit Data Viz Post on Vegetarianism across countries' ],
+          [ new Date(2019, 3, 23), 45, 'Reddit Data Viz Post on the Big Mac Index' ],
+          [ new Date(2019, 3, 24), 35, 'Reddit Data Viz Post on Game of Thrones Search Popularity' ],
+          [ new Date(2019, 2, 18), 40, 'Collaboration with Rongyi, Joanna and Roxanne for Environment Topic' ],
+          [ new Date(2019, 2, 11), 40, 'Consult with Dr Charles for Medium post: how to ask good questions' ],
+          [ new Date(2019, 1, 18), 40, 'Consult with Dr Charles for Medium post: how to add value to Data Science' ],
+          [ new Date(2019, 1, 18), 40, 'Consult with Dr Charles for Medium post: how to add value to Data Science' ], 
+          [ new Date(2019, 3, 26), 100, 'Finished creating this viz for meaningful outlook & reflection' ],
+          [ new Date(2019, 1, 23), 40, 'Consult with Dr Charles for publishing and writing about Data' ],
+          
           // Many rows omitted for brevity.
           /*
           [ new Date(2019, 9, 4), 38177 ],
@@ -46,8 +67,12 @@
        var chart = new google.visualization.Calendar(document.getElementById('calendar_basic'));
 
        var options = {
-         title: "Raivat's Meaningful Journey",
+         title: "My Journey in a Data-Driven Class",
          height: 500,
+         noDataPattern: {
+           backgroundColor: '#E91E63',
+           color: '#F48FB1'
+         }
        };
 
        chart.draw(dataTable, options);
@@ -55,6 +80,6 @@
     </script>
   </head>
   <body>
-    <div id="calendar_basic" style="width: 1000px; height: 500px;"></div>
+    <div id="calendar_basic" style="width: 1000px; height: 720px;"></div>
   </body>
 </html>
